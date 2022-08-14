@@ -1,0 +1,14 @@
+version: 6.8
+services: 
+  postgres:
+    image: postgres:lates
+    restart: always
+    evironment: 
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=superuser
+    volumes: 
+    - postgres:/var/lib/postgresql/data
+    port: 
+    - "5432:5432"
+valumes: 
+  postgres:
